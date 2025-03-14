@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2025-03-??
+  Changes:
+    - Includes the code from amatos from the original repo (https://github.com/343N/robot-recall/pull/5)
+    - Updated for Factorio 2.0
+---------------------------------------------------------------------------------------------------
 Version: 0.2.12
 Date: 2020-08-15
   Changes:
