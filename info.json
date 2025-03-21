@@ -1,10 +1,10 @@
 {
     "name": "robot-recall-space-age",
-    "version": "0.3.0",
+    "version": "0.3.3",
     "title": "Robot Recall for Space Age",
     "author": "343N, nihilistzsche",
-    "homepage": "http://github.com/nihilistzsche/robot-recall-space-age",
+    "homepage": "https://github.com/nihilistzsche/robot-recall-space-age",
     "factorio_version": "2.0",
-    "dependencies": ["base >= 2.0.32"],
+    "dependencies": ["base >= 2.0.32", "(?) lokisbotsfork"],
     "description": "Lets you recall all robots in your network"
 }

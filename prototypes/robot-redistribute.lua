@@ -63,14 +63,19 @@ recipe.enabled = false
 recipe.name = "robot-redistribute-chest"
 recipe.results = { { type = "item", name = "robot-redistribute-chest", amount = 1 } }
 
-table.insert(
-	data.raw["technology"]["construction-robotics"].effects,
-	{ type = "unlock-recipe", recipe = "robot-redistribute-chest" }
-)
-table.insert(
-	data.raw["technology"]["logistic-robotics"].effects,
-	{ type = "unlock-recipe", recipe = "robot-redistribute-chest" }
-)
+local con_tech = "construction-robotics"
+local log_tech = "logistic-robotics"
+if mods["lokisbotsfork"] then
+	con_tech = "bots-robots-steamworks"
+	log_tech = "bots-robots-steamworks"
+end
+table.insert(data.raw["technology"][con_tech].effects, { type = "unlock-recipe", recipe = "robot-redistribute-chest" })
+if log_tech ~= con_tech then
+	table.insert(
+		data.raw["technology"][log_tech].effects,
+		{ type = "unlock-recipe", recipe = "robot-redistribute-chest" }
+	)
+end
 
 if __DebugAdapter then
 	local variables = require("__debugadapter__/variables.lua")

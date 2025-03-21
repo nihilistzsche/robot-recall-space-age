@@ -1,6 +1,23 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.3.0
+Version: 0.3.3
 Date: 2025-03-??
+  Changes:
+    - When Lokis bots fork is installed, which removes the vanilla logistic and conscruction robot
+      technologies, the robot recall chest and robot redistribution chest will be instead unlocked
+      via the "Bots Construction Bot Mk0" and "Bots Logistic Bot Mk0" technologies.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 2025-03-17
+  Bugfixes:
+    - Fix for Robot Recall chest and robot redistribute chest reset quality.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2025-03-15
+  Bugfixes:
+    - Fixed LuaEntity API call when LuaEntity was invalid on the robot recall chest.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2025-03-14
   Changes:
     - Includes the code from amatos from the original repo (https://github.com/343N/robot-recall/pull/5)
     - Updated for Factorio 2.0
