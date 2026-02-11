@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.0
-Date: 2026-02-??
+Date: 2026-02-11
   Changes:
     - The robot recall chest can now be instructed to recall robots via signal.  I do not think I
       will split robots by quality in the UI, as I think that would make the list too large, but
