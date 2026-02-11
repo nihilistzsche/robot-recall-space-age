@@ -20,29 +20,29 @@ entity.selection_box = { { -0.5, -0.5 }, { 0.5, 0.5 } }
 entity.damaged_trigger_effect = baseEnt.damaged_trigger_effect
 entity.type = "logistic-container"
 entity.animation = {
-	layers = {
-		{
+    layers = {
+        {
 
-			filename = "__robot-recall-space-age__/graphics/entity/robot-recall-chest.png",
-			priority = "extra-high",
-			width = 66,
-			height = 74,
-			frame_count = 7,
-			shift = util.by_pixel(0, -2),
-			scale = 0.5,
-		},
-		{
+            filename = "__robot-recall-space-age__/graphics/entity/robot-recall-chest.png",
+            priority = "extra-high",
+            width = 66,
+            height = 74,
+            frame_count = 7,
+            shift = util.by_pixel(0, -2),
+            scale = 0.5,
+        },
+        {
 
-			filename = "__base__/graphics/entity/logistic-chest/logistic-chest-shadow.png",
-			priority = "extra-high",
-			width = 96,
-			height = 44,
-			repeat_count = 7,
-			shift = util.by_pixel(8.5, 5),
-			draw_as_shadow = true,
-			scale = 0.5,
-		},
-	},
+            filename = "__base__/graphics/entity/logistic-chest/logistic-chest-shadow.png",
+            priority = "extra-high",
+            width = 96,
+            height = 44,
+            repeat_count = 7,
+            shift = util.by_pixel(8.5, 5),
+            draw_as_shadow = true,
+            scale = 0.5,
+        },
+    },
 }
 
 entity.circuit_connector.points = baseEnt.circuit_connector.points
@@ -55,10 +55,10 @@ item.name = "robot-recall-chest"
 item.place_result = "robot-recall-chest"
 item.icon_size = 64
 item.icons = {
-	{
-		icon = "__robot-recall-space-age__/graphics/icons/robot-recall-chest.png",
-		-- tint = { r = 0.5, g = 0.5, b = 0.5, a = 1}
-	},
+    {
+        icon = "__robot-recall-space-age__/graphics/icons/robot-recall-chest.png",
+        -- tint = { r = 0.5, g = 0.5, b = 0.5, a = 1}
+    },
 }
 
 local recipe = table.deepcopy(data.raw.recipe["requester-chest"])
@@ -69,15 +69,13 @@ recipe.results = { { type = "item", name = "robot-recall-chest", amount = 1 } }
 local con_tech = "construction-robotics"
 local log_tech = "logistic-robotics"
 if mods["lokisbotsfork"] then
-	con_tech = "bots-robots-steamworks"
-	log_tech = "bots-robots-steamworks"
+    con_tech = "bots-robots-steamworks"
+    log_tech = "bots-robots-steamworks"
 end
 table.insert(data.raw["technology"][con_tech].effects, { type = "unlock-recipe", recipe = "robot-recall-chest" })
 if log_tech ~= con_tech then
-	table.insert(data.raw["technology"][log_tech].effects, { type = "unlock-recipe", recipe = "robot-recall-chest" })
+    table.insert(data.raw["technology"][log_tech].effects, { type = "unlock-recipe", recipe = "robot-recall-chest" })
 end
 
-if __DebugAdapter then
-	local variables = require("__debugadapter__/variables.lua")
-end
+if __DebugAdapter then local variables = require("__debugadapter__/variables.lua") end
 data:extend({ item, entity, recipe })

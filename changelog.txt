@@ -1,10 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+Date: 2026-02-??
+  Changes:
+    - The robot recall chest can now be instructed to recall robots via signal.  I do not think I
+      will split robots by quality in the UI, as I think that would make the list too large, but
+      you can recall robots of specific quality by sending a signal with quality.  A signal without
+      quality will recall all robots of any quality like the gui does.
+
+      You will need to rebuild the robot recall chest to achieve this functionality as it requires
+      some glue to react to the signals.
+    - Removed the robot redistribution chest, I'm not sure what it's purpose was and I only want to 
+      deal with the recall chest.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
-Date: 2025-03-??
+Date: 2026-02-03
   Changes:
     - When Lokis bots fork is installed, which removes the vanilla logistic and conscruction robot
       technologies, the robot recall chest and robot redistribution chest will be instead unlocked
       via the "Bots Construction Bot Mk0" and "Bots Logistic Bot Mk0" technologies.
+    - Fix API call to spill_item_stack.
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.2
 Date: 2025-03-17
