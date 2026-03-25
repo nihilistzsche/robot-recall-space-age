@@ -552,7 +552,8 @@ script.on_nth_tick(180, function(event)
         local gui = v.ply.gui.screen
         if v.ent and v.ent.valid and v.ent.logistic_network and v.ent.logistic_network.valid then
             local robots = rr.getAllIdleRobotsInNetwork(v.ent.logistic_network)
-            rr.updateRecallGuiList(v.ply.gui.screen, robots, v.ent.logistic_network)
+            if not gui["robot-recall-chest"] then rr.buildRecallGui(gui, v.ent) end
+            rr.updateRecallGuiList(gui, robots, v.ent.logistic_network)
         end
     end
     -- end
